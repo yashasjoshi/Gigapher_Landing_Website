@@ -1,0 +1,55 @@
+[class*=illustration-] {
+	position: relative;
+
+	&::after {
+		pointer-events: none;
+	}
+}
+
+[class*=illustration-element-]::after {
+	z-index: -3;
+}
+
+[class*=illustration-section-]::after {
+	z-index: -2;
+}
+
+// Hero illustration
+.illustration-top-right-waves::after {
+	@include illustration('illus-top-right-waves.svg', 100%, 286px, top);
+}
+
+// Features illustration 02
+.illustration-sun::after {
+	@include illustration('illus-sun.svg', 100%, 300px, top, -650px, -100px);
+}
+
+// Features illustration 02
+.illustration-closed-waves::after {
+	@include illustration('illustration-closed-waves.svg', 100%, 400px, top, -50px, 100px);
+}
+
+.illustration-snowflake::after {
+	@include illustration('illus-snowflake.svg', 100%, 350px, top, -650px, null);
+}
+
+.illustration-smile::after {
+	@include illustration('illus-smile.svg', 100%, 350px, top, 650px, 10px);
+}
+
+.illustration-thumb::after {
+	@include illustration('illus-thumb.svg', 100%, 350px, bottom, -650px, 570px);
+}
+
+
+.illustration-planet-waves::after {
+	@include illustration('illus-planet-waves.svg', 100%, 350px, bottom, 650px, 630px);
+}
+
+.illustration-brackets::after {
+	@include illustration('illus-brackets.svg', 100%, 350px, top, 650px, 400px);
+}
+
+.illustration-star::after {
+	@include illustration('illus-star.svg',  100%, 350px, top, -650px, 30px);
+}

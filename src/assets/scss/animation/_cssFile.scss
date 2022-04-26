@@ -1,0 +1,593 @@
+//html {background: #0C0019;}
+.container_anim {
+	display:flex;
+	//align-items: right;
+	//justify-content: center;
+}
+#redblocks > * {
+    transform: translate3d(160px, -93px, 0);
+    animation: moveblocks 4s 1s ease infinite;
+}
+
+@keyframes moveblocks {
+    0% {
+        transform: translate3d(160px, -93px, 0);
+    }
+    50%,
+    100% {
+        transform: translate(0);
+    }
+}
+
+#firstBlock {
+    transform: translate3d(160px, -93px, 0);
+    animation: firstBlock 4s 1s ease infinite;
+}
+#blockdis {
+    animation: blockdis 4s 1s ease infinite;
+}
+@keyframes blockdis {
+    30% {
+        opacity: 1;
+    }
+    40%, 100% {
+        opacity: 0;
+        transform: translate3d(-160px, 93px, 0);
+    }
+}
+@keyframes firstBlock {
+    0%,
+    15% {
+        opacity: 0;
+    }
+    40%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@for $i from 1 to 5 {
+    #redblocksparticles g:nth-child(#{$i}) polygon {
+        opacity: 0.35;
+        animation: glow 4s 1s ease infinite;
+    }
+}
+@for $i from 1 to 20 {
+    #redblocksparticles g:nth-child(1) g circle:nth-child(#{$i}){
+        animation: dots 4s #{1000+$i*50}ms ease infinite;
+    }
+    #redblocksparticles g:nth-child(2) g circle:nth-child(#{$i}){
+        animation: dots 4s #{1000+$i*50}ms ease infinite;
+    }
+    #redblocksparticles g:nth-child(3) g circle:nth-child(#{$i}){
+        animation: dots 4s #{1000+$i*50}ms ease infinite;
+    }
+    #redblocksparticles g:nth-child(4) g circle:nth-child(#{$i}){
+        animation: dots 4s #{1000+$i*50}ms ease infinite;
+    }
+}
+@keyframes glow {
+    0%,
+    45% {
+        opacity: 0;
+    }
+    60%, 100% {
+        opacity: 0.35;
+    }
+}
+
+@keyframes dots {
+    0%,
+    35% {
+        transform: translate(0);
+        opacity: 0;
+    }
+    60%, 80% {
+        transform: translate(55px, -35px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(55px, -35px);
+        opacity: 0;
+    }
+}
+
+@for $i from 1 to 22 {
+    #purplebg > :nth-child(#{$i}) {
+        animation: up 2s #{$i* 500}ms ease infinite alternate;
+    }
+}
+
+@keyframes up {
+    to {
+        transform: translate(0, -25px);
+    }
+}
+
+@for $i from 1 to 13 {
+    #bottomparticles > :nth-child(#{$i}){
+        animation: particles 4s #{$i*300}ms ease infinite alternate, p 2s ease infinite alternate;
+    }
+    #bottomparticles2 > :nth-child(#{$i}){
+        animation: particles 4s #{$i*300}ms ease infinite alternate, p 2s ease infinite alternate;
+    }
+    #redglowparticles > :nth-child(#{$i}){
+        animation: particles 4s #{$i*300}ms ease infinite alternate, p 2s ease infinite alternate;
+    }
+
+}
+@keyframes p {
+    85%,
+     100% {
+        opacity: 0;
+    }
+}
+
+@keyframes particles {
+    0%, 100% {
+        transform: translate(0);
+    }
+    50% {
+        transform: translate(10px, 15px);
+    }
+}
+
+.particlespoly {
+    animation: p 2s ease infinite alternate;
+}
+
+@for $i from 1 to 4 {
+    #d-app g:nth-child(#{$i}){
+        animation: updown 2s #{$i*200}ms ease-in-out infinite alternate;
+    }
+}
+@for $i from 1 to 4 {
+    #d-apps2 g:nth-child(#{$i}){
+        animation: updown 2s #{$i*200}ms ease-in-out infinite alternate;
+    }
+}
+@for $i from 1 to 20 {
+    #d-apps2wrapper g:nth-child(3) g > circle:nth-child(#{$i}){
+        animation: updown 2s #{$i*50}ms ease infinite alternate;
+    }
+}
+@for $i from 1 to 20 {
+    #d-appswrapper g:nth-child(2) g > circle:nth-child(#{$i}){
+        animation: updown 2s #{$i*50}ms ease infinite alternate;
+    }
+}
+
+
+@keyframes updown {
+    100% {
+        transform: translate(0, -20px);
+    }
+}
+
+#Layer_1 > g:nth-child(2) > g:nth-child(18) > g:nth-child(12) {
+    animation: arrows 1s ease-in-out infinite alternate, p 2s ease infinite alternate;
+}
+@keyframes arrows {
+    to {
+        transform: translate(25px, 25px);
+    }
+}
+
+#Layer_1 > g:nth-child(2) > g:nth-child(17) > g:nth-child(13) {
+    animation: arrows2 1s ease-in-out infinite alternate, p 2s ease infinite alternate;
+}
+@keyframes arrows2 {
+    to {
+        transform: translate(-25px, -25px);
+    }
+}
+
+#Layer_1 > g:nth-child(2) > g:nth-child(17) > g:nth-child(12) {
+    animation: arrows 1s ease-in-out infinite alternate, p 2s ease infinite alternate;
+}
+
+.fill_fff {
+    fill:#fff;
+}
+
+#bottomline {
+    fill:none;
+    strokeMiterlimit:10;
+    stroke:transparent;
+}
+
+.stopColorFO {
+    stop-color: #ffffff1f;
+}
+
+.stopOpacity202333 {
+    stop-color: #2023334f;
+}
+
+.stopOpacity262938 {
+    stop-color: #2629386e;
+}
+
+.stopOpacity363947 {
+    stop-color: #20233391;
+}
+
+.stopOpacity515460 {
+    stop-color: #515460b6;
+}
+
+.stopOpacity777983 {
+    stop-color: #777983cc;
+}
+
+.stopOpacityA8A9AF {
+    stop-color: #a8a9afda;
+}
+
+.stopOpacityE2E2E5 {
+    stop-color: #e2e2e5ec;
+}
+
+.stopOpacityFFB2B9 {
+    stop-color: #ffb2b885;
+}
+
+
+
+.stopOpacityC5C6D1 {
+    stop-color: #c5c6d1d5;
+}
+
+.stopOpacity9497AB {
+    stop-color: #9497aba2;
+}
+
+.stopOpacity6E728D {
+    stop-color: #6e728d80;
+}
+
+.stopOpacity535878 {
+    stop-color: #5358783d;
+}
+
+.stopOpacity43486B {
+    stop-color: #43486b11;
+}
+
+.stopOpacityFFB2B9 {
+    stop-color: #ffb2b877;
+}
+
+.stopOpacityFFB3B7 {
+    stop-color: #ffb3b713;
+}
+
+
+.stopOpacityFFD7DA {
+    stop-color: #ffd7da2c;
+}
+
+.stopOpacityFFB1B8 {
+    stop-color: #ffb1b762;
+}
+
+.stopOpacityFF969F {
+    stop-color: #ff969f9a;
+}
+
+.stopOpacityFF8690 {
+    stop-color: #ff8690e5;
+}
+
+
+.stopColor202333 {
+    stop-color: #202333;
+}
+
+.stopColor5C1B99 {
+    stop-color: #5C1B99;
+}
+
+.stopColor5C6399 {
+    stop-color: #5C6399;
+}
+
+.stopColorFFFFFF {
+    stop-color: #FFFFFF;
+}
+
+.stopColor808080 {
+    stop-color: #808080;
+}
+
+.stopColor6F6F6F {
+    stop-color: #6F6F6F;
+}
+
+.stopColor575757 {
+    stop-color: #575757;
+}
+
+.stopColor4E4E4E {
+    stop-color: #4E4E4E;
+}
+
+.stopColor9F9F9F {
+    stop-color: #9F9F9F;
+}
+
+.stopColorB0B0B0 {
+    stop-color: #B0B0B0;
+}
+
+.stopColorBFBFBF {
+    stop-color: #BFBFBF;
+}
+
+.stopColor9A9A9A {
+    stop-color: #9A9A9A;
+}
+
+.stopColorA61D30 {
+    stop-color: #A61D30;
+}
+
+.stopColorAA2033 {
+    stop-color: #AA2033;
+}
+
+.stopColorB4293A {
+    stop-color: #B4293A;
+}
+
+.stopColorC73848 {
+    stop-color: #C73848;
+}
+
+.stopColorE04D5A {
+    stop-color: #E04D5A;
+}
+
+.stopColorFF6670 {
+    stop-color: #FF6670;
+}
+
+.stopColorE6455C {
+    stop-color: #E6455C;
+}
+
+.stopColorFF3D49 {
+    stop-color: #FF3D49;
+}
+
+.stopColor262626 {
+    stop-color: #262626;
+}
+
+.stopColor2F2F2F {
+    stop-color: #2F2F2F;
+}
+
+.stopColor474747 {
+    stop-color: #474747;
+}
+
+.stopColor595959 {
+    stop-color: #595959;
+}
+
+.stopColor969696 {
+    stop-color: #969696;
+}
+
+.stopColor717171 {
+    stop-color: #717171;
+}
+
+.stopColor565656 {
+    stop-color: #565656;
+}
+
+.stopColor464646 {
+    stop-color: #464646;
+}
+
+.stopColor404040 {
+    stop-color: #404040;
+}
+
+.stopColorA2A2A2 {
+    stop-color: #A2A2A2;
+}
+
+.stopColor7B7B7B {
+    stop-color: #7B7B7B;
+}
+
+.stopColor636363 {
+    stop-color: #636363;
+}
+
+.stopColor5A5A5A {
+    stop-color: #5A5A5A;
+}
+
+.stopColorD3D3D3 {
+    stop-color: #D3D3D3;
+}
+
+.stopColorABABAB {
+    stop-color: #ABABAB;
+}
+
+.stopColor939393 {
+    stop-color: #939393;
+}
+
+.stopColor8A8A8A {
+    stop-color: #8A8A8A;
+}
+
+.stopColorFF808B {
+    stop-color: #FF808B;
+}
+
+.stopColor3D4266 {
+    stop-color: #3D4266;
+}
+
+.stopColorAAAAAE {
+    stop-color: #AAAAAE;
+}
+
+.stopColor767884 {
+    stop-color: #767884;
+}
+
+.stopColor515366 {
+    stop-color: #515366;
+}
+
+.stopColor3A3D54 {
+    stop-color: #3A3D54;
+}
+
+.stopColor32354D {
+    stop-color: #32354D;
+}
+
+.stopColor3A3C4D {
+    stop-color: #3A3C4D;
+}
+
+.stopColor3D3F4E {
+    stop-color: #3D3F4E;
+}
+
+.stopColor464752 {
+    stop-color: #464752;
+}
+
+.stopColor555557 {
+    stop-color: #555557;
+}
+
+.stopColorA6A6A6 {
+    stop-color: #A6A6A6;
+}
+
+.stopColor8C8C8C {
+    stop-color: #8C8C8C;
+}
+
+.stopColor6A6A6A {
+    stop-color: #6A6A6A;
+}
+
+.stopColor525252 {
+    stop-color: #525252;
+}
+
+.stopColor494949 {
+    stop-color: #494949;
+}
+
+.stopColorF8613A {
+    stop-color: #F8613A;
+}
+
+.stopColorF86843 {
+    stop-color: #F86843;
+}
+
+.stopColorF97C5B {
+    stop-color: #F97C5B;
+}
+
+.stopColorFB9C83 {
+    stop-color: #FB9C83;
+}
+
+.stopColorFDC8BA {
+    stop-color: #FDC8BA;
+}
+
+.stopColorCE243C {
+    stop-color: #CE243C;
+}
+
+.stopColorD42D41 {
+    stop-color: #D42D41;
+}
+
+.stopColorE44550 {
+    stop-color: #E44550;
+}
+
+.stopColorE64852 {
+    stop-color: #E64852;
+}
+
+.stopColorD02A41 {
+    stop-color: #D02A41;
+}
+
+.stopColorD73A4F {
+    stop-color: #D73A4F;
+}
+
+.stopColorE35566 {
+    stop-color: #E35566;
+}
+
+.stopColorF27B85 {
+    stop-color: #F27B85;
+}
+
+.stopColorFF999F {
+    stop-color: #FF999F;
+}
+
+.stopColorDA3239 {
+    stop-color: #DA3239;
+}
+
+.stopColorCA2B38 {
+    stop-color: #CA2B38;
+}
+
+.stopColorB21F37 {
+    stop-color: #B21F37;
+}
+
+.stopColorA91B37 {
+    stop-color: #A91B37;
+}
+
+.stopColor5F5F5F {
+    stop-color: #5F5F5F;
+}
+
+.stopColor707070 {
+    stop-color: #707070;
+}
+
+.stopColor8B8B8B {
+    stop-color: #8B8B8B;
+}
+
+.stopColorB8B8B8 {
+    stop-color: #B8B8B8;
+}
+
+.stopColor656565 {
+    stop-color: #656565;
+}
+
+.stopColor787878 {
+    stop-color: #787878;
+}
+
+.stopColorFFB3B7 {
+    stop-color: #FFB3B7;
+}
